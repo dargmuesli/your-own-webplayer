@@ -29,12 +29,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['plyr/dist/plyr.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['~/plugins/vue-plyr'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -68,7 +68,22 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    extend(_config, _ctx) {},
+    /*
+     ** https://github.com/nuxt-community/nuxt-property-decorator
+     */
+    babel: {
+      presets({ _isServer }) {
+        return [
+          ['@nuxt/babel-preset-app', { loose: true, corejs: { version: 3 } }],
+        ]
+      },
+    },
+  },
   serverMiddleware: ['~/api/playlists.ts', '~/api/signedUrl.ts'],
   fontawesome: {
     imports: [
