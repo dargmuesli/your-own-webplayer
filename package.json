@@ -1,6 +1,8 @@
 {
   "name": "your-own-webplayer",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "description": "Your own webplayer with Nuxt.js and Amazon S3.",
+  "author": "Jonas Thelemann",
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
