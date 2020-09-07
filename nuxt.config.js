@@ -57,6 +57,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-fontawesome',
   ],
   /*
    ** Axios module configuration
@@ -69,4 +70,12 @@ export default {
    */
   build: {},
   serverMiddleware: ['~/api/playlists.ts', '~/api/signedUrl.ts'],
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faDownload', 'faPlay'],
+      },
+    ],
+  },
 }
