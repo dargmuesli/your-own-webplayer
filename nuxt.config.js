@@ -68,4 +68,5 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  serverMiddleware: ['~/api/playlists.ts', '~/api/signedUrl.ts'],
 }
